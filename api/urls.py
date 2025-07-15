@@ -10,7 +10,7 @@ urlpatterns = [
     # /articles/ - GET (list) và POST (create)
     path('articles/', ArticleView.as_view(), name='article-list-create'),
     # /articles/<pk>/ - GET (detail), PUT (update), DELETE (delete)
-    path('articles/<int:pk>/', ArticleView.as_view(), name='article-detail'),
+    path('articles/<slug:slug>/', ArticleView.as_view(), name='article-detail'),
     path('', include(router.urls)),
 ]
 

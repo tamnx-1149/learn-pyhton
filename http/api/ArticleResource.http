@@ -24,36 +24,35 @@ Content-Type: application/json
 screen-id-request: 0000
 
 
-### Artical get by id
-GET {{host}}/api/articles/1/
+### Artical get by slug
+GET {{host}}/api/articles/bai-10/
 Accept: application/json
 Content-Type: application/json
 screen-id-request: 0000
-
-{
-  "title": "title",
-  "author": "tamnx",
-  "description": "this is a description"
-}
 
 
 
 ### Artical update by id
-PUT {{host}}/api/articles/1/
+PUT {{host}}/api/articles/bai-10/
 Accept: application/json
 Content-Type: application/json
 screen-id-request: 0000
 
 {
-  "title": "title",
-  "author": "tamnx",
-  "description": "this is a description"
+  "slug": "bai-10",
+  "body": "helo world",
+  "title": "BAI 1",
+  "description": "this is a description",
+  "author": "1",
+  "tagList": [
+    "tag1",
+    "tag2"
+  ]
 }
 
 
-
 ### Artical delete by id
-DELETE {{host}}/api/articles/1/
+DELETE {{host}}/api/articles/bai-10/
 Accept: application/json
 Content-Type: application/json
 screen-id-request: 0000
