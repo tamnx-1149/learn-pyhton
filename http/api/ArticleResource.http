@@ -1,11 +1,11 @@
-### Create Artical - #AU0001
+### Create Artical
 POST {{host}}/api/articles/
 Accept: application/json
 Content-Type: application/json
 screen-id-request: 0000
 
 {
-  "slug": "bai-10",
+  "slug": "bai-7",
   "body": "helo world",
   "title": "BAI 1",
   "description": "this is a description",
@@ -15,7 +15,6 @@ screen-id-request: 0000
     "tag2"
   ]
 }
-
 
 ### Artical get all
 GET {{host}}/api/articles/
@@ -56,12 +55,6 @@ DELETE {{host}}/api/articles/bai-10/
 Accept: application/json
 Content-Type: application/json
 screen-id-request: 0000
-
-{
-  "title": "title",
-  "author": "tamnx",
-  "description": "this is a description"
-}
 
 
 
