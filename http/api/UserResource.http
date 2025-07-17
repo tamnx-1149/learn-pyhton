@@ -1,0 +1,6 @@
+### Get Profile
+GET {{host}}/api/profiles/tamnx/
+Accept: application/json
+Content-Type: application/json
+screen-id-request: 0000
+

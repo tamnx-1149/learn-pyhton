@@ -1,0 +1,25 @@
+### Create Artical
+POST {{host}}/api/articles/bai-7/comments/
+Accept: application/json
+Content-Type: application/json
+screen-id-request: 0000
+
+{
+  "body": "comment bai 7",
+  "author": "1"
+}
+
+### Get Comment by slug artical
+GET {{host}}/api/articles/
+Accept: application/json
+Content-Type: application/json
+screen-id-request: 0000
+
+
+### Delete comment by id
+DELETE {{host}}/api/articles/1/
+Accept: application/json
+Content-Type: application/json
+screen-id-request: 0000
+
+
