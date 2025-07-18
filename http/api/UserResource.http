@@ -2,5 +2,45 @@
 GET {{host}}/api/profiles/tamnx/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
+
+### Login
+POST {{host}}/api/login/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "test1@gmail.com",
+  "password": "123456"
+}
+
+### Register
+POST {{host}}/api/register/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "email": "tamnx2@gmial.com",
+  "password": "123456",
+  "username": "tamnx2"
+}
+
+### Get me
+GET {{host}}/api/me/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+### Update profile
+PUT {{host}}/api/update-profile/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyODIxMjg3LCJpYXQiOjE3NTI4MjA5ODcsImp0aSI6ImMwMTE0NjFiMjlmMDQxZTNhMmVmMzQ3NjExNGNhMWE5IiwidXNlcl9pZCI6MX0.shyjfvGjU3grj_59gkDzSHpLPLbAznvoLVxeRQm8U8U
+
+{
+  "email": "tamnx1@gmial.com",
+  "first_name": "Test",
+  "last_name": "User"
+}

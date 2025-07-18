@@ -8,6 +8,7 @@ class User(models.Model):
     image = models.URLField(blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    password = models.CharField(max_length=128)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
