@@ -2,7 +2,6 @@
 POST {{host}}/api/articles/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 {
   "slug": "bai-7",
@@ -20,14 +19,12 @@ screen-id-request: 0000
 GET {{host}}/api/articles/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 
 ### Artical get by slug
 GET {{host}}/api/articles/bai-10/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 
 
@@ -35,7 +32,6 @@ screen-id-request: 0000
 PUT {{host}}/api/articles/bai-10/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 {
   "slug": "bai-10",
@@ -54,7 +50,6 @@ screen-id-request: 0000
 DELETE {{host}}/api/articles/bai-10/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 
 
