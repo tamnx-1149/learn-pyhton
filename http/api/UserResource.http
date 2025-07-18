@@ -2,5 +2,33 @@
 GET {{host}}/api/profiles/tamnx/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
+
+
+### Login
+POST {{host}}/api/login/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "tamnx1@gmial.com",
+  "password": "123456"
+}
+
+### Register
+POST {{host}}/api/register/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "email": "tamnx2@gmial.com",
+  "password": "123456",
+  "username": "tamnx2"
+}
+
+### Get me
+GET {{host}}/api/me/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
 
