@@ -2,7 +2,6 @@
 POST {{host}}/api/articles/bai-7/comments/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 {
   "body": "comment bai 7",
@@ -13,13 +12,11 @@ screen-id-request: 0000
 GET {{host}}/api/articles/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 
 ### Delete comment by id
 DELETE {{host}}/api/articles/1/
 Accept: application/json
 Content-Type: application/json
-screen-id-request: 0000
 
 
