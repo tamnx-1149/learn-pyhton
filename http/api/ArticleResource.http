@@ -16,9 +16,10 @@ Content-Type: application/json
 }
 
 ### Artical get all
-GET {{host}}/api/articles/
+GET {{host}}/api/articles/?tag=tag1&ordering=-title&page=1&author=1
 Accept: application/json
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 
 ### Artical get by slug
