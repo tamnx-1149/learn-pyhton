@@ -2,9 +2,10 @@
 POST {{host}}/api/articles/
 Accept: application/json
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-  "slug": "bai-7",
+  "slug": "bai-1",
   "body": "helo world",
   "title": "BAI 1",
   "description": "this is a description",

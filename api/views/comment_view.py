@@ -24,7 +24,13 @@ class CommentView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk):
-        comment = get_object_or_404(Comment, pk=pk)
+    def delete(self, request, slug, pk):
+        article = get_object_or_404(Article, slug=slug)
+        comment = get_object_or_404(Comment, id=pk, article=article)
+
+        # Optional: Check if the user is the author of the comment
+        if comment.author != request.user:
+            return Response({'detail': 'Permission denied.'}, status=status.HTTP_403_FORBIDDEN)
+
         comment.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'detail': 'Comment deleted successfully.'}, status=status.HTTP_204_NO_CONTENT)

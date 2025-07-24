@@ -1,0 +1,24 @@
+### Get artical favorite list
+GET {{host}}/api/favorites/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Add artical favorite
+POST {{host}}/api/articles/bai-1/favorites/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "email": "tamnx2@gmial.com",
+  "password": "123456",
+  "username": "tamnx2"
+}
+
+### Delte artical favorite
+GET {{host}}/api/favorites/1/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
