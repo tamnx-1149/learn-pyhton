@@ -1,13 +1,13 @@
 ### Create Artical
 POST {{host}}/api/articles/
-Accept: application/json
+Accept: application/json; version=v2
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "slug": "bai-1",
+  "slug": "bai-3",
   "body": "helo world",
-  "title": "BAI 1",
+  "title": "BAI 3",
   "description": "this is a description",
   "author": "1",
   "tagList": [
@@ -24,10 +24,10 @@ Authorization: Bearer {{token}}
 
 
 ### Artical get by slug
-GET {{host}}/api/articles/bai-10/
+GET {{host}}/api/articles/bai-1/
 Accept: application/json
-Content-Type: application/json
-
+Content-Type: application/json; version=v1
+Authorization: Bearer {{token}}
 
 
 ### Artical update by id

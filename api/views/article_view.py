@@ -1,3 +1,5 @@
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
@@ -10,8 +12,10 @@ from rest_framework.pagination import PageNumberPagination
 from django.db import connection
 
 class ArticleView(APIView):
-
+    @method_decorator(cache_page(60*5))  # cache 5 phút
     def get(self, request, slug=None):
+        version = request.version  #
+        print(version)
         if slug:
             # Lấy chi tiết bài viết
             article = get_object_or_404(Article, slug=slug)
