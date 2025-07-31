@@ -3,6 +3,7 @@ from rest_framework.routers import DefaultRouter
 from api.views.item_view import ItemViewSet
 from api.views import ArticleView
 from api.views import CommentView
+from api.views.user_follow_list_view import UserFollowListAPIView
 from api.views.user_follow_view import UserFollowAPIView
 from api.views.user_view import UserView, LoginView, RegisterView, MeView
 from api.views.article_favorite_view import ArticleFavoriteAPIView
@@ -35,7 +36,9 @@ urlpatterns = [
 
     path('articles/<slug:slug>/favorites/', ArticleFavoriteAPIView.as_view(), name='article-favorite'),
 
+    path('articles/<slug:slug>/favorites/<int:pk>/', ArticleFavoriteAPIView.as_view(), name='article-favorite-delete'),
+
     path('profiles/<str:username>/follow/', UserFollowAPIView.as_view(), name='user-follow'),  # POST (follow), GET (list)
 
-    # path('profiles/<username:username>/follow/<int:followee_id>/', UserFollowAPIView.as_view(), name='user-unfollow'),  # DELETE (unfollow)
+    path('follow/', UserFollowListAPIView.as_view(), name='user-follow-list'), #GET (list)
 ]

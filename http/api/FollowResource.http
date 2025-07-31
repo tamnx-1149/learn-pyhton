@@ -4,7 +4,7 @@ Accept: application/json
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
-### Add follow
+### Add follow, Unfollow
 POST {{host}}/api/profiles/tamnx2/follow/
 Accept: application/json
 Content-Type: application/json
@@ -16,9 +16,4 @@ Authorization: Bearer {{token}}
   "username": "tamnx2"
 }
 
-### Unfollow
-GET {{host}}/api/follow/1/
-Accept: application/json
-Content-Type: application/json
-Authorization: Bearer {{token}}
 

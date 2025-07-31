@@ -13,3 +13,14 @@ class UserFollowSerializer(serializers.ModelSerializer):
         model = UserFollower
         fields = ['id', 'follower_id', 'followee_id', 'followed_at']
         read_only_fields = ['followed_at']
+
+
+class UserFollowInfoSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(source='followee.id')  # hoặc 'follower.id' tùy view
+    username = serializers.CharField(source='followee.username')
+    email = serializers.EmailField(source='followee.email')
+    followed_at = serializers.DateTimeField()
+
+    class Meta:
+        model = UserFollower
+        fields = ['id', 'username', 'email', 'followed_at']
