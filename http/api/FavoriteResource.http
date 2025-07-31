@@ -17,7 +17,7 @@ Authorization: Bearer {{token}}
 }
 
 ### Delte artical favorite
-GET {{host}}/api/favorites/1/
+DELETE {{host}}/api/articles/bai-1/favorites/1/
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer {{token}}

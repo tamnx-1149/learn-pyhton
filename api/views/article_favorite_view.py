@@ -20,3 +20,9 @@ class ArticleFavoriteAPIView(APIView):
         serializer = ArticleFavoriteSerializer(favorite)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    def delete(self, request, slug, pk):
+        favorite = get_object_or_404(ArticleFavorite, id=pk)
+
+        # Delete the favorite if it exists
+        favorite.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
